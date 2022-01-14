@@ -17,11 +17,15 @@
 
     <form action="/" method="post">
         <div>
-            <label for="titulo">Título</label>
-            <input type="text" name="titulo" id="titulo">
+            <label for="titulo">T&iacute;tulo:</label>
+            <input type="text" name="titulo" id="titulo" />
         </div>
         <div>
-            <label for ="tipo">Tipo:</label>
+            <label for="descripcion">Descripci&oacute;n:</label>
+            <textarea id="descripcion"></textarea>
+        </div>
+        <div>
+            <label for="tipo">Tipo:</label>
             <select id="tipo">
                 <option value="1">Tipo 1</option>
                 <option value="2">Tipo 2</option>
@@ -31,17 +35,20 @@
         <div>
             <button type="button" id="agregar">Agregar</button>
         </div>
-
     </form>
 
     <table>
         <thead>
             <tr>
-                <th>Título</th>
+                <th>Titulo</th>
                 <th>Descripcion</th>
                 <th>Tipo</th>
+                <th></th>
             </tr>
         </thead>
+        <tbody id="tabla-elementos">
+            
+        </tbody>
     </table>
 
 </body>
