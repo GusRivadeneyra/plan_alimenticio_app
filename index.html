@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Plan Alimenticion</title>
-</head>
-<body>
-    
-<ul class="menu">
-<li><a href="">Inicio</a></li>
-<li><a href="menu.html">Menu</a></li>
-<li><a href="">Opciones</a></li>
-<li><a href="">Inventario</a></li>
-<button class="boton-inicio" href="registro.html">REGISTRATE</button>
-</ul>
-
-
-</body>
+  </head>
+  <body>
+    <ul class="menu">
+      <li><a>Inicio</a></li>
+      <li><a href="src/menu.html">Menu</a></li>
+      <li><a>Opciones</a></li>
+      <li><a>Inventario</a></li>
+      <div class="boton-inicio">
+        <form action="src/registro.html">
+          <input type="submit" value="Go to Resgistro 1 without link" />
+        </form>
+      </div>
+      <div class="link">
+        <form action="src/registro.html">
+          <input type="submit" value="Go to Resgistro 2 with link" />
+        </form>
+      </div>
+      <button class="link" href="src/registro.html">
+        REGISTRATE 0 with link
+      </button>
+      <button class="boton-inicio" href="src/registro.html">
+        REGISTRATE 0
+      </button>
+      <div>
+        <form action="src/registro.html">
+          <input type="submit" value="Go to Resgistro 1" />
+          <button type="submit" class="link">REGISTRATE 0</button>
+        </form>
+      </div>
+    </ul>
+  </body>
 </html>
