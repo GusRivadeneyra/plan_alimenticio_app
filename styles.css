@@ -1,34 +1,53 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e8e8e8;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e8e8e8;
 }
 
 .menu {
-    list-style: none;
-    padding: 0;
-    background-color: aqua;
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
+  list-style: none;
+  padding: 0;
+  background-color: aqua;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .menu li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 500;
-    padding: 20px;
-    display: block;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 20px;
+  display: block;
 }
 
 .menu li {
-    display: inline-block;
+  display: inline-block;
 }
 
-.menu li a:hover{
-    background-color: tomato;
+.menu li a:hover {
+  background-color: tomato;
+}
+
+.link button {
+  float: right;
+  margin: 20px;
+  background-color: #e8e8e8;
+  border-radius: 10%;
+}
+
+.link div {
+  float: right;
+  margin: 20px;
+  background-color: blue;
+  border-radius: 10%;
+}
+
+.link div:hover {
+  background-color: green;
 }
 
 .boton-inicio {
+<<<<<<< HEAD
      float: right;
      margin: 20px;
      background-color: #e8e8e8;
@@ -65,3 +84,10 @@ body {
     grid-row: 1/6;
 }
 
+=======
+  float: right;
+  margin: 20px;
+  background-color: #e8e8e8;
+  border-radius: 10%;
+}
+>>>>>>> main
