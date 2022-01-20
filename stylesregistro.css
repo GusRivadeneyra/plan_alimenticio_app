@@ -1,4 +1,4 @@
-body {
+/*body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #e8e8e8;
 }
@@ -26,4 +26,29 @@ body {
 
 .menu li a:hover{
     background-color: tomato;
-}
+} */
+
+nav {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+  }
+  
+  nav a {
+    margin: 16px;
+    padding: 4px;
+    line-height: 2;
+    color: black;
+    font-family: "Patrick Hand", cursive;
+    font-size: 24px;
+    background-color: gold;
+    border-radius: 30px;
+  }
+  
+  nav a:hover {
+    color: black;
+    background-color: floralwhite;
+  }
+
+
