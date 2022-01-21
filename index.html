@@ -7,14 +7,27 @@
     <title>Plan Alimenticion</title>
   </head>
   <body>
-    <nav>
+    <header>
+      <button id="home" onclick="ROUTER.load('home')">Home</button>
+      <button id="menu" onclick="ROUTER.load('menu')">Menu</button>
+    </header>
+    <!-- Aquí es donde se insertará el contenido según la página en la que nos encontremos -->
+    <div id="content"></div>
+
+    <!-- En estos archivos estará la mágica para la navegación -->
+    <!-- <script src="./js/router.js"></script>
+    <script src="./js/routes.js"></script> -->
+    <script src="/js/router.js"></script>
+    <script src="/js/routes.js"></script>
+    <script src="/js/index.js"></script>
+    <!-- <nav>
       <a id="nav-cards">#Cards<i class="icon-smile-o"></i></a>
       <a id="nav-form">#Form<i class="icon-codepen"></i></a>
       <a id="nav-test">#Test<i class="icon-codepen"></i></a>
       <a id="nav-contact">#Contact<i class="icon-codepen"></i></a>
-    </nav>
+    </nav> -->
 
-    <article id="cards">
+    <!-- <article id="cards">
       <div class="grid">
         <div class="hola">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam beatae
@@ -150,6 +163,6 @@
           document.getElementById("cards").style.display = "none";
           document.getElementById("test").style.display = "none";
         });
-    </script>
+    </script> -->
   </body>
 </html>
