@@ -3,32 +3,153 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Plan Alimenticion</title>
   </head>
   <body>
-    <ul class="menu">
-      <li><a>Inicio</a></li>
-      <li><a href="src/menu.html">Menu</a></li>
-      <li><a>Opciones</a></li>
-      <li><a>Inventario</a></li>
-      <div class="boton-inicio">
-        <form action="src/registro.html">
-          <input type="submit" value="Go to Resgistro 1 without link" />
-        </form>
-      </div>
-    </ul>
+    <nav>
+      <a id="nav-cards">#Cards<i class="icon-smile-o"></i></a>
+      <a id="nav-form">#Form<i class="icon-codepen"></i></a>
+      <a id="nav-test">#Test<i class="icon-codepen"></i></a>
+      <a id="nav-contact">#Contact<i class="icon-codepen"></i></a>
+    </nav>
+
+    <article id="cards">
       <div class="grid">
-        <div class="hola">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam beatae minima similique nesciunt facere, perspiciatis placeat nisi consequuntur deleniti praesentium.</div>
-        <div>Dignissimos amet consectetur non. Eius ipsa, accusantium sint nostrum, eveniet at, fugit dicta quod quas repellendus fuga provident delectus iure.</div>
-        <div>Impedit id omnis sint perspiciatis perferendis! Nisi corporis recusandae obcaecati minima adipisci at, sint, ab voluptatum sequi blanditiis id quas.</div>
-        <div>Iure cum assumenda consequuntur nihil repellat dolor laborum voluptas eum suscipit, neque ratione natus voluptates? Nemo perferendis nostrum ad amet!</div>
-        <div class="ingresar">Repellendus aliquid minima beatae dolorem, a rem saepe ad voluptas, mollitia sit doloribus modi amet, expedita labore harum provident debitis.</div>
-        <div>Laboriosam vitae itaque recusandae culpa harum modi nam, quas libero ipsa voluptatibus possimus quasi sed molestiae voluptate ipsam perferendis laudantium.</div>
-        <div>Hic magnam nostrum dolorem ex fugit odit aliquid iure, dicta unde totam deserunt eum dolore quas illo accusamus? Odit, nobis!</div>
-        <div>Quibusdam explicabo vel inventore, quia ratione, corrupti possimus, minus molestias beatae incidunt numquam odio et quae maxime iste esse a!</div>
-        
-    </div>
-    
+        <div class="hola">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam beatae
+          minima similique nesciunt facere, perspiciatis placeat nisi
+          consequuntur deleniti praesentium.
+        </div>
+        <div>
+          Dignissimos amet consectetur non. Eius ipsa, accusantium sint nostrum,
+          eveniet at, fugit dicta quod quas repellendus fuga provident delectus
+          iure.
+        </div>
+        <div>
+          Impedit id omnis sint perspiciatis perferendis! Nisi corporis
+          recusandae obcaecati minima adipisci at, sint, ab voluptatum sequi
+          blanditiis id quas.
+        </div>
+        <div>
+          Iure cum assumenda consequuntur nihil repellat dolor laborum voluptas
+          eum suscipit, neque ratione natus voluptates? Nemo perferendis nostrum
+          ad amet!
+        </div>
+        <div class="ingresar">
+          Repellendus aliquid minima beatae dolorem, a rem saepe ad voluptas,
+          mollitia sit doloribus modi amet, expedita labore harum provident
+          debitis.
+        </div>
+        <div>
+          Laboriosam vitae itaque recusandae culpa harum modi nam, quas libero
+          ipsa voluptatibus possimus quasi sed molestiae voluptate ipsam
+          perferendis laudantium.
+        </div>
+        <div>
+          Hic magnam nostrum dolorem ex fugit odit aliquid iure, dicta unde
+          totam deserunt eum dolore quas illo accusamus? Odit, nobis!
+        </div>
+        <div>
+          Quibusdam explicabo vel inventore, quia ratione, corrupti possimus,
+          minus molestias beatae incidunt numquam odio et quae maxime iste esse
+          a!
+        </div>
+      </div>
+    </article>
+
+    <article id="form">
+      <form>
+        <div>
+          <label for="titulo">T&iacute;tulo:</label>
+          <input type="text" name="titulo" id="titulo" />
+        </div>
+        <div>
+          <label for="descripcion">Descripci&oacute;n:</label>
+          <textarea id="descripcion"></textarea>
+        </div>
+        <div>
+          <label for="tipo">Tipo:</label>
+          <select id="tipo">
+            <option value="1">Tipo 1</option>
+            <option value="2">Tipo 2</option>
+            <option value="3">Tipo 3</option>
+          </select>
+        </div>
+        <div>
+          <button type="button" id="agregar">Agregar</button>
+        </div>
+      </form>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Titulo</th>
+            <th>Descripcion</th>
+            <th>Tipo</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tabla-elementos"></tbody>
+      </table>
+    </article>
+
+    <article id="test">
+      <div>test</div>
+    </article>
+
+    <article id="contact">
+      <div>contacto</div>
+    </article>
+    <script>
+      // make the navbar visible
+      document.querySelector("nav").style.display = "flex";
+
+      // INITIAL state
+      // makes card <article /> visible
+      document.getElementById("cards").style.display = "block";
+      // hides form <article />
+      document.getElementById("form").style.display = "none";
+      // hides test <article />
+      document.getElementById("test").style.display = "none";
+      // hides contact <article />
+      document.getElementById("contact").style.display = "none";
+
+      document
+        .getElementById("nav-cards")
+        .addEventListener("click", function () {
+          document.getElementById("cards").style.display = "block";
+          document.getElementById("form").style.display = "none";
+          document.getElementById("test").style.display = "none";
+          document.getElementById("contact").style.display = "none";
+        });
+
+      document
+        .getElementById("nav-form")
+        .addEventListener("click", function () {
+          document.getElementById("form").style.display = "block";
+          document.getElementById("cards").style.display = "none";
+          document.getElementById("test").style.display = "none";
+          document.getElementById("contact").style.display = "none";
+        });
+
+      document
+        .getElementById("nav-test")
+        .addEventListener("click", function () {
+          document.getElementById("test").style.display = "block";
+          document.getElementById("form").style.display = "none";
+          document.getElementById("cards").style.display = "none";
+          document.getElementById("contact").style.display = "none";
+        });
+
+      document
+        .getElementById("nav-contact")
+        .addEventListener("click", function () {
+          document.getElementById("contact").style.display = "block";
+          document.getElementById("form").style.display = "none";
+          document.getElementById("cards").style.display = "none";
+          document.getElementById("test").style.display = "none";
+        });
+    </script>
   </body>
 </html>
