@@ -7,7 +7,7 @@
     <title>Plan Alimenticion</title>
   </head>
   <body>
-    <header>
+    <!--<header>
       <button id="home" onclick="ROUTER.load('home')">Home</button>
       <button id="menu" onclick="ROUTER.load('menu')">Menu</button>
     </header>
@@ -17,7 +17,7 @@
     <!-- En estos archivos estará la mágica para la navegación -->
     <!-- <script src="./js/router.js"></script>
     <script src="./js/routes.js"></script> -->
-    <script src="/js/router.js"></script>
+    <!--<script src="/js/router.js"></script>
     <script src="/js/routes.js"></script>
     <script src="/js/index.js"></script>
     <!-- <nav>
@@ -27,48 +27,49 @@
       <a id="nav-contact">#Contact<i class="icon-codepen"></i></a>
     </nav> -->
 
-    <!-- <article id="cards">
-      <div class="grid">
-        <div class="hola">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam beatae
-          minima similique nesciunt facere, perspiciatis placeat nisi
-          consequuntur deleniti praesentium.
-        </div>
-        <div>
-          Dignissimos amet consectetur non. Eius ipsa, accusantium sint nostrum,
-          eveniet at, fugit dicta quod quas repellendus fuga provident delectus
-          iure.
-        </div>
-        <div>
-          Impedit id omnis sint perspiciatis perferendis! Nisi corporis
-          recusandae obcaecati minima adipisci at, sint, ab voluptatum sequi
-          blanditiis id quas.
-        </div>
-        <div>
-          Iure cum assumenda consequuntur nihil repellat dolor laborum voluptas
-          eum suscipit, neque ratione natus voluptates? Nemo perferendis nostrum
-          ad amet!
-        </div>
-        <div class="ingresar">
-          Repellendus aliquid minima beatae dolorem, a rem saepe ad voluptas,
-          mollitia sit doloribus modi amet, expedita labore harum provident
-          debitis.
-        </div>
-        <div>
-          Laboriosam vitae itaque recusandae culpa harum modi nam, quas libero
-          ipsa voluptatibus possimus quasi sed molestiae voluptate ipsam
-          perferendis laudantium.
-        </div>
-        <div>
-          Hic magnam nostrum dolorem ex fugit odit aliquid iure, dicta unde
-          totam deserunt eum dolore quas illo accusamus? Odit, nobis!
-        </div>
-        <div>
-          Quibusdam explicabo vel inventore, quia ratione, corrupti possimus,
-          minus molestias beatae incidunt numquam odio et quae maxime iste esse
-          a!
-        </div>
-      </div>
+    <article id="cards">
+
+   <div class="contenedor">
+     
+      <nav>
+      <a id="nav-cards">#Cards<i class="icon-smile-o"></i></a>
+      <a id="nav-form">#Form<i class="icon-codepen"></i></a>
+      <a id="nav-test">#Test<i class="icon-codepen"></i></a>
+      <a id="nav-contact">#Contact<i class="icon-codepen"></i></a>
+    </nav> 
+     
+   <main class="contenido">
+     <h1>Contendio</h1>
+     <img src=".//images/FOTO1.jpg" width="500px">
+     
+   </main>
+   <aside class="sidebar">
+<h3>ACCEDER</h3>
+
+<form action="/my-handling-form-page" method="post">
+  <ul>
+   <li>
+     <label for="name">Nombre:</label>
+     <input type="text" id="name" name="user_name">
+   </li>
+   <li>
+     <label for="mail">Correo electrónico:</label>
+     <input type="email" id="mail" name="user_mail">
+   </li>
+  </ul>
+ </form>
+   </aside>
+   <div class="widget-1">
+<h3>widget1</h3>
+   </div>
+   <div class="widget-2">
+<h3>widget2</h3>
+   </div>
+   <footer class="footer">
+<h3>FOOTER</h3>
+   </footer>
+   </div>
+    
     </article>
 
     <article id="form">
@@ -108,7 +109,11 @@
     </article>
 
     <article id="test">
-      <div>test</div>
+      <div>Menu</div>
+
+      
+    </div>
+
     </article>
 
     <article id="contact">
@@ -163,6 +168,32 @@
           document.getElementById("cards").style.display = "none";
           document.getElementById("test").style.display = "none";
         });
-    </script> -->
+
+        // Menu
+
+        var prev = document.getElementById('previous');
+var next = document.getElementById('next');
+
+var arr = ["IMG/IMG1.JPEG", "IMG/IMG2.JPEG", "IMG/IMG3.JPEG", "IMG/IMG4.JPEG"];
+
+var i = 0;
+
+next.addEventListener('click', function(){
+ i++;
+ if( i > arr.length -1){
+     i = 0;
+ }
+ document.getElementById('image').src =arr[i];
+})
+
+prev.addEventListener('click', function(){
+ i--;
+ if( i < 0){
+     i - arr.length - 1;
+ }
+ document.getElementById('image').src =arr[i];
+    
+})
+    </script> 
   </body>
 </html>
