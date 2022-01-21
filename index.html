@@ -5,37 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Plan Alimenticion</title>
+    
   </head>
   <body>
-    <!--<header>
-      <button id="home" onclick="ROUTER.load('home')">Home</button>
-      <button id="menu" onclick="ROUTER.load('menu')">Menu</button>
+    
+    <header>
+        <button id="home" onclick="ROUTER.load('home')">Home</button>
+        <button id="menu" onclick="ROUTER.load('menu')">Menu</button>
     </header>
-    <!-- Aquí es donde se insertará el contenido según la página en la que nos encontremos -->
+
     <div id="content"></div>
 
-    <!-- En estos archivos estará la mágica para la navegación -->
-    <!-- <script src="./js/router.js"></script>
-    <script src="./js/routes.js"></script> -->
-    <!--<script src="/js/router.js"></script>
-    <script src="/js/routes.js"></script>
-    <script src="/js/index.js"></script>
-    <!-- <nav>
-      <a id="nav-cards">#Cards<i class="icon-smile-o"></i></a>
-      <a id="nav-form">#Form<i class="icon-codepen"></i></a>
-      <a id="nav-test">#Test<i class="icon-codepen"></i></a>
-      <a id="nav-contact">#Contact<i class="icon-codepen"></i></a>
-    </nav> -->
-
+    
     <article id="cards">
 
    <div class="contenedor">
-     
       <nav>
-      <a id="nav-cards">#Cards<i class="icon-smile-o"></i></a>
-      <a id="nav-form">#Form<i class="icon-codepen"></i></a>
-      <a id="nav-test">#Test<i class="icon-codepen"></i></a>
-      <a id="nav-contact">#Contact<i class="icon-codepen"></i></a>
+        <a id="nav-cards">#Cards<i class="icon-smile-o"></i></a>
+        <a id="nav-form">#Form<i class="icon-codepen"></i></a>
+        <a id="nav-test">#Test<i class="icon-codepen"></i></a>
+        <a id="nav-contact">#Contact<i class="icon-codepen"></i></a>
     </nav> 
      
    <main class="contenido">
@@ -171,29 +160,32 @@
 
         // Menu
 
-        var prev = document.getElementById('previous');
-var next = document.getElementById('next');
+        // var prev = document.getElementById('previous');
+// var next = document.getElementById('next');
 
-var arr = ["IMG/IMG1.JPEG", "IMG/IMG2.JPEG", "IMG/IMG3.JPEG", "IMG/IMG4.JPEG"];
+// var arr = ["IMG/IMG1.JPEG", "IMG/IMG2.JPEG", "IMG/IMG3.JPEG", "IMG/IMG4.JPEG"];
 
-var i = 0;
+// var i = 0;
 
-next.addEventListener('click', function(){
- i++;
- if( i > arr.length -1){
-     i = 0;
- }
- document.getElementById('image').src =arr[i];
-})
+// next.addEventListener('click', function(){
+//  i++;
+//  if( i > arr.length -1){
+//      i = 0;
+//  }
+//  document.getElementById('image').src =arr[i];
+// })
 
-prev.addEventListener('click', function(){
- i--;
- if( i < 0){
-     i - arr.length - 1;
- }
- document.getElementById('image').src =arr[i];
+// prev.addEventListener('click', function(){
+//  i--;
+//  if( i < 0){
+//      i - arr.length - 1;
+//  }
+//  document.getElementById('image').src =arr[i];
     
-})
+// })
+
+
     </script> 
+    <script src="./js/router.js"  defer type="module"></script>
   </body>
 </html>

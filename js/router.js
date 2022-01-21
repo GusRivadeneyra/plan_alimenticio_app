@@ -1,3 +1,6 @@
+import { DATA } from "./data.js";
+import { optionsBuilder } from "./builder.js";
+
 class Router {
   constructor(paths) {
     this.paths = paths;
@@ -11,6 +14,8 @@ class Router {
     const URL = pathname === "/" ? "home" : pathname.replace("/", "");
     console.log(URL);
     this.load(URL);
+
+    console.log(DATA);
   }
 
   load(page) {
@@ -22,3 +27,18 @@ class Router {
     window.history.pushState({}, "done", path);
   }
 }
+
+const optionsHTML = optionsBuilder(DATA.options);
+
+const PATHS = {
+  home: {
+    path: "/",
+    template: optionsHTML,
+  },
+  menu: {
+    path: "/menu",
+    template: `<h1>👩🏻‍💻 Menu</h1>`,
+  },
+};
+
+export const ROUTER = new Router(PATHS);
