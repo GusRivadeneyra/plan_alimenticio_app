@@ -1,5 +1,4 @@
-import { DATA } from "./data.js";
-import { optionsBuilder } from "./builder.js";
+import { PATHS } from "./data.js";
 
 class Router {
   constructor(paths) {
@@ -11,34 +10,23 @@ class Router {
     const {
       location: { pathname = "/" },
     } = window;
-    const URL = pathname === "/" ? "home" : pathname.replace("/", "");
-    console.log(URL);
+    const URL = pathname === "/" ? "menu" : pathname.replace("/", "");
     this.load(URL);
-
-    console.log(DATA);
   }
 
   load(page) {
     const { paths } = this;
+    console.log(page);
+    const { path, htmlContent } = paths[page];
 
-    const { path, template } = paths[page];
-    const $CONTAINER = document.querySelector("#content");
-    $CONTAINER.innerHTML = template;
+    // change content
+    const contentContainer = document.querySelector("#content");
+    contentContainer.innerHTML = htmlContent;
+
     window.history.pushState({}, "done", path);
   }
 }
 
-const optionsHTML = optionsBuilder(DATA.options);
+const ROUTER = new Router(PATHS);
 
-const PATHS = {
-  home: {
-    path: "/",
-    template: optionsHTML,
-  },
-  menu: {
-    path: "/menu",
-    template: `<h1>👩🏻‍💻 Menu</h1>`,
-  },
-};
-
-export const ROUTER = new Router(PATHS);
+window.ROUTER = ROUTER;
