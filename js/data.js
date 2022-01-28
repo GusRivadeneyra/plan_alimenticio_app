@@ -32,19 +32,36 @@ export const PATHS = {
   menu: {
     id: "menu",
     path: "/menu",
-    htmlContent: menuBuilder(DATA),
+    htmlContent: menuBuilder(DATA), // string
+    setHtmlContent: (contentContainer) => {
+      const content = PATHS.menu.htmlContent;
+      contentContainer.innerHTML = "";
+      contentContainer.innerHTML = content; // uses innerHTML
+    },
     navTitle: "Menu",
   },
   options: {
     id: "options",
     path: "/options",
-    htmlContent: optionsBuilder(DATA.options),
+    htmlContent: optionsBuilder(DATA.options), // DOM node object
+    setHtmlContent: function (contentContainer) {
+      const content = PATHS.options.htmlContent;
+      contentContainer.innerHTML = "";
+
+      console.log(content);
+      contentContainer.appendChild(content); // uses appendChild
+    },
     navTitle: "Opciones",
   },
   contacto: {
     id: "contacto",
     path: "/contacto",
-    htmlContent: contactBuilder(DATA.contacto),
+    htmlContent: contactBuilder(DATA.contacto), // string
+    setHtmlContent: (contentContainer) => {
+      const content = PATHS.contacto.htmlContent;
+      contentContainer.innerHTML = "";
+      contentContainer.innerHTML = content;
+    },
     navTitle: "Contacto",
   },
 };

@@ -1,14 +1,49 @@
 export const htmlBuilder = () => {};
 
+const getTextNode = (text) => {
+  return document.createTextNode(text);
+};
+
+const getButton = (buttonText, className) => {
+  const buttonElement = document.createElement("button");
+  buttonElement.appendChild(getTextNode(buttonText));
+  buttonElement.className = className;
+  return buttonElement;
+};
+
+function getIngredientsDiv(ingredients) {
+  const mainDiv = document.createElement("div");
+  ingredients.map((ingr) => {
+    const ingredientDiv = document.createElement("div");
+    ingredientDiv.appendChild(getTextNode(ingr));
+    mainDiv.appendChild(ingredientDiv);
+  });
+
+  mainDiv.className = "ingredients";
+  return mainDiv;
+}
+
 export const optionsBuilder = (options) => {
   if (!options.length) {
     return null;
   }
-  const optionsArr = options.map(
-    (option) => `<div> class="options"${option.name}</div>`
-  );
-  const optionsStr = optionsArr.join("");
-  return optionsStr;
+  const divToReturn = document.createElement("div");
+  options.map((options) => {
+    const niceButton = getButton(options.name, "options");
+    divToReturn.appendChild(niceButton);
+  });
+
+  const ingredientsContainer = document.createElement("div");
+  ingredientsContainer.classList.add("ingredients-container");
+
+  options.map((options) => {
+    const ingredientsDiv = getIngredientsDiv(options.ingredients);
+    ingredientsContainer.appendChild(ingredientsDiv);
+  });
+
+  divToReturn.appendChild(ingredientsContainer);
+
+  return divToReturn;
 };
 
 export const contactBuilder = (contactData) => `

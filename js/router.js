@@ -16,12 +16,11 @@ class Router {
 
   load(page) {
     const { paths } = this;
-    console.log(page);
-    const { path, htmlContent } = paths[page];
+    const { path, htmlContent, setHtmlContent } = paths[page];
 
     // change content
     const contentContainer = document.querySelector("#content");
-    contentContainer.innerHTML = htmlContent;
+    setHtmlContent(contentContainer);
 
     window.history.pushState({}, "done", path);
   }

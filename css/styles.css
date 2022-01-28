@@ -19,3 +19,27 @@ body {
   border-radius: 15px;
   box-shadow: 10px 5px 5px grey;
 }
+
+.options {
+  width: 100px;
+  margin: 16px;
+  padding: 16px;
+  border: black 1px;
+  size: 16px;
+  background-color: gray;
+}
+
+.ingredients-container {
+  margin: 24px;
+  padding: 16px;
+}
+
+.ingredients {
+  background-color: green;
+  padding: 8px;
+}
+
+.ingredients div {
+  background-color: black;
+  color: white;
+}
