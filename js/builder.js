@@ -21,11 +21,15 @@ export const contactBuilder = (contactData) => `
     <ul>
         <li>telefono: ${contactData.phone}</li>
         <li>email: ${contactData.email}</li>
+        <li>foto: ${contactData.mainImage}</li>
     </ul>
     <h3>Soy boxeador, ven a mi casa y demonos un tiro</h3>
 </div>
-
+<button onclick="myFunction()">entrar</button>
+<p> me la pelan </p>
+<li>telefono: ${contactData.email}</li>
 `;
+
 
 export const menuBuilder = (todaLaData) => {
   const menuData = todaLaData.menu; // object

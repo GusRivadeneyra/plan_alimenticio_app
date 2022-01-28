@@ -17,14 +17,14 @@ const DATA = {
     {
       id: "002",
       name: "Chocomilk",
-      ingredients: ["leche", "chocolate"],
+      ingredients: ["leche", "chocolate", "palomitas"],
     },
   ],
   contacto: {
     name: "Gustavo R.",
     address: "C. Siempre Alegre #01",
     phone: "+52 333 000 3333",
-    email: "gus@tavo.com",
+    email: "rivadeneyra.g@gmail.com",
   },
 };
 
