@@ -1,0 +1,10 @@
+.contact-container {
+  background-color: cornsilk;
+  box-shadow: 10px 5px 5px grey;
+  align-items: center;
+  gap: 1em;
+}
+
+.nombre {
+  margin: 16px;
+}

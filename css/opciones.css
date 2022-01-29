@@ -1,0 +1,29 @@
+.options {
+  width: 100px;
+  margin: 16px;
+  padding: 16px;
+  border: black 1px;
+  size: 16px;
+  background-color: gray;
+}
+
+.ingredients-container {
+  margin: 24px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.ingredients {
+  background-color: green;
+  padding: 8px;
+  width: 70px;
+  border-radius: 15px;
+}
+
+.ingredients div {
+  color: white;
+  width: 70px;
+  border-radius: 15px;
+}

@@ -4,6 +4,7 @@ const DATA = {
   menu: {
     title: "Menu Principal",
     mainImage: "images/FOTO1.jpg",
+    secondaryImage: "images/IMG2.JPEG",
     description: "El primer menu de este proyecto",
     owner: "Gustavo R.",
     options: ["001"],
@@ -22,8 +23,8 @@ const DATA = {
     {
       id: "003",
       name: "pescado con verduras",
-      ingredients: ["Pescado", "vegetales mixtos"]
-    }
+      ingredients: ["Pescado", "vegetales mixtos"],
+    },
   ],
   contacto: {
     name: "Gustavo R.",
@@ -41,7 +42,8 @@ export const PATHS = {
     setHtmlContent: (contentContainer) => {
       const content = PATHS.menu.htmlContent;
       contentContainer.innerHTML = "";
-      contentContainer.innerHTML = content; // uses innerHTML
+      // contentContainer.innerHTML = content; // uses innerHTML
+      contentContainer.appendChild(content); // uses appendChild
     },
     navTitle: "Menu",
   },

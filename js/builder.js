@@ -46,26 +46,28 @@ export const optionsBuilder = (options) => {
   return divToReturn;
 };
 
+export const contactBuilder = (contactData) => {
+  const createdDiv1 = document.createElement("div");
+  createdDiv1.appendChild(getTextNode(contactData.name));
+  createdDiv1.className = "nombre";
+  const createdDiv2 = document.createElement("div");
+  createdDiv2.appendChild(getTextNode(contactData.address));
+  createdDiv2.className = "direccion";
+  const createdDiv3 = document.createElement("div");
+  createdDiv3.appendChild(getTextNode(contactData.phone));
+  const createdDiv4 = document.createElement("div");
+  createdDiv4.appendChild(getTextNode(contactData.email));
 
- export const contactBuilder = (contactData) => {
-   const createdDiv1 = document.createElement("div");
-   createdDiv1.appendChild(getTextNode(contactData.name));
-   const createdDiv2 = document.createElement("div");
-   createdDiv2.appendChild(getTextNode(contactData.address));
-   const createdDiv3 = document.createElement("div");
-   createdDiv3.appendChild(getTextNode(contactData.phone));
-   const createdDiv4 = document.createElement("div");
-   createdDiv4.appendChild(getTextNode(contactData.email));
+  const parentDiv = document.createElement("div");
+  parentDiv.className = "contact-container";
 
+  parentDiv.appendChild(createdDiv1);
+  parentDiv.appendChild(createdDiv2);
+  parentDiv.appendChild(createdDiv3);
+  parentDiv.appendChild(createdDiv4);
 
-   const parentDiv = document.createElement("div");
-   parentDiv.appendChild(createdDiv1)
-   parentDiv.appendChild(createdDiv2)
-   parentDiv.appendChild(createdDiv3)
-   parentDiv.appendChild(createdDiv4)
-   
-   return parentDiv
- };
+  return parentDiv;
+};
 // `
 // <div class="contact">
 //     <h3>Mi nombre ${contactData.name}</h3>
@@ -104,15 +106,26 @@ export const menuBuilder = (todaLaData) => {
   );
   const optionsHTMLString = optionsStringArr.join("");
 
-  return `
-    <div class="menu">
-        <h3>${menuData.title}</h3>
-        <h4>Usuario: ${menuData.owner}</h4>
-        <img src="${menuData.mainImage}" />
-        <div>
-            <h4>Opciones disponibles</h4>
-            <div>${optionsHTMLString}</div>
-        </div>
-    </div>
-  `;
+  const image = document.createElement("img");
+  image.src = menuData.mainImage;
+
+  const secImage = document.createElement("img");
+  secImage.src = menuData.secondaryImage;
+
+  const returnDiv = document.createElement("div");
+  returnDiv.appendChild(image);
+  returnDiv.appendChild(secImage);
+
+  return returnDiv;
+  // return `
+  //   <div class="menu">
+  //       <h3>${menuData.title}</h3>
+  //       <h4>Usuario: ${menuData.owner}</h4>
+  //       <img src="${menuData.mainImage}" />
+  //       <div>
+  //           <h4>Opciones disponibles</h4>
+  //           <div>${optionsHTMLString}</div>
+  //       </div>
+  //   </div>
+  // `;
 };
