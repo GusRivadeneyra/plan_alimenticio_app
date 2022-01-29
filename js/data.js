@@ -19,6 +19,11 @@ const DATA = {
       name: "Chocomilk",
       ingredients: ["leche", "chocolate"],
     },
+    {
+      id: "003",
+      name: "pescado con verduras",
+      ingredients: ["Pescado", "vegetales mixtos"]
+    }
   ],
   contacto: {
     name: "Gustavo R.",
@@ -48,7 +53,6 @@ export const PATHS = {
       const content = PATHS.options.htmlContent;
       contentContainer.innerHTML = "";
 
-      console.log(content);
       contentContainer.appendChild(content); // uses appendChild
     },
     navTitle: "Opciones",
@@ -60,7 +64,10 @@ export const PATHS = {
     setHtmlContent: (contentContainer) => {
       const content = PATHS.contacto.htmlContent;
       contentContainer.innerHTML = "";
-      contentContainer.innerHTML = content;
+
+      contentContainer.appendChild(content); // uses appendChild
+
+      // contentContainer.innerHTML = content;
     },
     navTitle: "Contacto",
   },

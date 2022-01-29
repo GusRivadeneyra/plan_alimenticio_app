@@ -32,14 +32,24 @@ body {
 .ingredients-container {
   margin: 24px;
   padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
 
 .ingredients {
   background-color: green;
   padding: 8px;
+  width: 70px;
+  border-radius: 15px;
 }
 
 .ingredients div {
-  background-color: black;
   color: white;
+  width: 70px;
+  border-radius: 15px;
+}
+
+.content {
+  background-color: cornsilk;
 }
