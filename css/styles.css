@@ -17,4 +17,5 @@ body {
 
 .content-container {
   padding: 32px;
+  gap: 1em;
 }

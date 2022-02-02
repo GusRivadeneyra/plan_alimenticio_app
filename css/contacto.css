@@ -1,10 +1,39 @@
 .contact-container {
   background-color: cornsilk;
   box-shadow: 10px 5px 5px grey;
-  align-items: center;
-  gap: 1em;
+  border-radius: 20px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-gap: 10px;
+ 
 }
 
 .nombre {
-  margin: 16px;
+  margin: 20px;
+  gap: 1em;
+  text-align: center;
+  grid-template-rows: 33%;
+  gap: 1em;
 }
+
+.direccion {
+  margin: 16px;
+  gap: 1em;
+  text-align: center;
+}
+
+.phone {
+  margin: 16px;
+  gap: 1em;
+  text-align: center;
+}
+
+.email {
+  margin: 16px;
+  gap: 1em;
+  text-align: center;
+}
+
+

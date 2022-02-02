@@ -1,8 +1,24 @@
 .menu {
   width: 100%;
+  
 }
 
-.menu img {
+.menu img #content{
   border-radius: 15px;
   box-shadow: 10px 5px 5px grey;
+  grid-template-columns: auto 1fr auto;
 }
+
+.foto1, .foto2, .foto3 {
+  border-radius: 15px;
+  box-shadow: 10px 5px 5px grey;
+  width: 300px;
+}
+
+.carrusel {
+  display: flex;
+  align-items: center;
+  gap: 4em;
+  margin-left: 100px;
+}
+

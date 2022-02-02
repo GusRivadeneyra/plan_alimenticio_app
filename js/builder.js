@@ -55,8 +55,10 @@ export const contactBuilder = (contactData) => {
   createdDiv2.className = "direccion";
   const createdDiv3 = document.createElement("div");
   createdDiv3.appendChild(getTextNode(contactData.phone));
+  createdDiv3.className = "phone";
   const createdDiv4 = document.createElement("div");
   createdDiv4.appendChild(getTextNode(contactData.email));
+  createdDiv4.className = "email";
 
   const parentDiv = document.createElement("div");
   parentDiv.className = "contact-container";
@@ -108,13 +110,22 @@ export const menuBuilder = (todaLaData) => {
 
   const image = document.createElement("img");
   image.src = menuData.mainImage;
+  image.className = "foto1";
 
   const secImage = document.createElement("img");
   secImage.src = menuData.secondaryImage;
+  secImage.className = "foto2";
+
+  const thiImage = document.createElement("img");
+  thiImage.src = "images/IMG3.JPEG";
+  thiImage.className = "foto3";
 
   const returnDiv = document.createElement("div");
   returnDiv.appendChild(image);
   returnDiv.appendChild(secImage);
+  returnDiv.appendChild(thiImage);
+  returnDiv.className = "carrusel";
+
 
   return returnDiv;
   // return `
@@ -129,3 +140,5 @@ export const menuBuilder = (todaLaData) => {
   //   </div>
   // `;
 };
+
+

@@ -5,6 +5,7 @@ const DATA = {
     title: "Menu Principal",
     mainImage: "images/FOTO1.jpg",
     secondaryImage: "images/IMG2.JPEG",
+    thirdImage: "images/FOTO1.jpg", 
     description: "El primer menu de este proyecto",
     owner: "Gustavo R.",
     options: ["001"],
@@ -76,3 +77,4 @@ export const PATHS = {
 };
 
 window.PATHS = PATHS;
+
