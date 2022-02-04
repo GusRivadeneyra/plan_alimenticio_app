@@ -109,25 +109,33 @@ export const menuBuilder = (todaLaData) => {
   const optionsHTMLString = optionsStringArr.join("");
 
   const image = document.createElement("img");
-  image.src = menuData.mainImage;
+  image.src = "images/desayuno.jpg";
   image.className = "foto1";
 
   const secImage = document.createElement("img");
-  secImage.src = menuData.secondaryImage;
+  secImage.src = "images/ensalada.jpg";
   secImage.className = "foto2";
 
   const thiImage = document.createElement("img");
-  thiImage.src = "images/IMG3.JPEG";
+  thiImage.src = "images/menestra-de-verduras-y-pescado-1.jpg";
   thiImage.className = "foto3";
+  thiImage.appendChild(getTextNode('ensalda con pollo'))
+
+  const text = document.createElement("div");
+  text.niceButton = "hola"
+
 
   const returnDiv = document.createElement("div");
   returnDiv.appendChild(image);
   returnDiv.appendChild(secImage);
   returnDiv.appendChild(thiImage);
+  returnDiv.appendChild(getTextNode("hola"))
   returnDiv.className = "carrusel";
 
 
   return returnDiv;
+
+  }
   // return `
   //   <div class="menu">
   //       <h3>${menuData.title}</h3>
@@ -139,6 +147,13 @@ export const menuBuilder = (todaLaData) => {
   //       </div>
   //   </div>
   // `;
-};
+
+
+export const menuText = (menuBuilder) => { 
+  const textoPrimero = document.createElement("div");
+  textoPrimero.appendChild(getTextNode("si va a salir"));
+  textoPrimero.className = "nombre";
+
+  return menuText;     };
 
 
